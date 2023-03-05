@@ -19,7 +19,7 @@ class RestaurantSearch extends Component {
     search(key) {
         console.warn(key)
         this.setState({lastSearch:key})
-        fetch("http://localhost:3000/restaurant?q=" + key).then((data) => {
+        fetch("http://localhost:5000/restaurant?q=" + key).then((data) => {
             data.json().then((resp) => {
                 console.warn("resp", resp)
                 if(resp.length>0)
@@ -35,7 +35,7 @@ class RestaurantSearch extends Component {
     }
     delete(id)
     {
-        fetch('http://localhost:3000/restaurant/'+id,
+        fetch('http://localhost:5000/restaurant/'+id,
         {
             method: "DELETE",
             // headers:{

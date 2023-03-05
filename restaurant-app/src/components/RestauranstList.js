@@ -19,7 +19,7 @@ class RestauranstList extends Component {
     }
     getData()
     {
-        fetch("http://localhost:3000/restaurant").then((response) => {
+        fetch("http://localhost:5000/restaurant").then((response) => {
             response.json().then((result) => {
                 this.setState({ list: result })
             })
@@ -27,7 +27,7 @@ class RestauranstList extends Component {
     }
     delete(id)
     {
-        fetch('http://localhost:3000/restaurant/'+id,
+        fetch('http://localhost:5000/restaurant/'+id,
         {
             method: "DELETE",
             // headers:{

@@ -12,7 +12,7 @@ class RestaurantCreate extends Component {
         }
     }
     create() {
-        fetch('http://localhost:3000/restaurant', {
+        fetch('http://localhost:5000/restaurant', {
             method: "Post",
             headers:{
                 'Content-Type':'application/json'
